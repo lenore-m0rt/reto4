@@ -1,3 +1,32 @@
-export default function Page() {
-    return <h1 className="text-3xl font-bold underline">Acá va el listado con los filtros</h1>
-  }
+export default function DashboardLayout({
+  children, // will be a page or nested layout
+}: {
+  children: React.ReactNode
+})
+  const TopCards = () => {
+      return (
+        <div className='grid lg:grid-cols-3 gap-2 p-4'>
+            <div className='lg:col-span-1 col-span-1 bg- flex justify-between w-full border p-4 rounded-lg bg-gradient-to-r from-cyan-300 to-blue-500'>
+                <div className='flex flex-col w-full pb-4'>
+                    <p className='text-2xl font-bold text-white self-center'>Ventas enviadas</p>
+                    <span className='text-white text-7xl font-bold self-end'>67</span>
+                </div>
+            </div>
+            <div className='lg:col-span-1 col-span-1 bg- flex justify-between w-full border p-4 rounded-lg bg-gradient-to-r from-pink-300 to-pink-500'>
+            <div className='flex flex-col w-full pb-4'>
+                <p className='text-2xl font-bold text-white self-center'>Ventas pendientes</p>
+                <span className='text-white text-6xl font-bold self-end'>09</span>
+            </div>
+        </div>
+        <div className='lg:col-span-1 col-span-1 bg- flex justify-between w-full border p-4 rounded-lg bg-gradient-to-r from-purple-400 to-purple-500'>
+                <div className='flex flex-col w-full pb-4'>
+                    <p className='text-2xl font-bold text-white self-center'>Ventas enviadas</p>
+                    <span className='text-white text-6xl font-bold self-end'>35</span>
+                </div>
+            </div>
+        </div>
+      )
+    }
+    
+    export default TopCards
+
