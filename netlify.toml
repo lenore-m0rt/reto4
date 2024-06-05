@@ -1,0 +1,2 @@
+[build]
+  publish = ".next"         # Directorio donde se encuentran los archivos compilados
